@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/sunriseSunsetFragment">
 
     <fragment
-        android:id="@+id/startFragment"
-        android:name="com.iansui.sunriseandsunset.fragments.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
+        android:id="@+id/sunriseSunsetFragment"
+        android:name="com.iansui.sunriseandsunset.sunrisesunset.SunriseSunsetFragment"
+        android:label="fragment_sunrise_sunset"
+        tools:layout="@layout/fragment_sunrise_sunset" />
 </navigation>
