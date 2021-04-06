@@ -25,18 +25,24 @@ class SunriseSunsetViewModel: ViewModel() {
 
     /**
      * Get SunriseSunset information from the SunriseSunset API Retrofit Service
-     * and updates [SunriseSunset] [LiveData]
+     * and updates [LiveData]
      */
     private fun getSunriseSunsetData() {
         _status.value = "Loading..."
         viewModelScope.launch {
             try {
-                val result = SunriseSunsetApi.retrofitService.getSunriseSunsetData(latitude = 14.676208,
-                    longitude = 121.043861,
+                val result = SunriseSunsetApi.retrofitService.getSunriseSunsetData(latitude = 121.043861,
+                    longitude = 14.676208,
                     date = "today")
-                _status.value = result
+                _status.value = "Success!" +
+                                "\nThe data retrieved are " +
+                                "\nSunrise: ${result.results.sunrise}" +
+                                "\nSunset: ${result.results.sunset}" +
+                                "\nSolar Noon: ${result.results.solarNoon}" +
+                                "\nDay Length: ${result.results.dayLength}"
             } catch (e: Exception) {
-                _status.value = "Failure: ${e.message}"
+                _status.value = "Failure! " +
+                                "\n${e.message}"
             }
         }
     }
