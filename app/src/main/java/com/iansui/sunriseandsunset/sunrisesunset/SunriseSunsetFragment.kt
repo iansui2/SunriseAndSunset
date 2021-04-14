@@ -13,10 +13,9 @@ class SunriseSunsetFragment : Fragment() {
     private val viewModel: SunriseSunsetViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?): View {
         val binding = FragmentSunriseSunsetBinding.inflate(inflater)
 
         // Allow Data Binding to Observe LiveData with the lifecycle of this Fragment

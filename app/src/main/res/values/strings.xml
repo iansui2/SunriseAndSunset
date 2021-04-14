@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SunriseAndSunset</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="solar_noon">Solar Noon</string>
+    <string name="day_length">Day Length</string>
 </resources>
